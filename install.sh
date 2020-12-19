@@ -77,7 +77,7 @@ if [ -z "$INTELLIJ_IDEA" ];
     echo 'Starting Intellij Idea installation...'
     wget https://download-cf.jetbrains.com/idea/ideaIU-2020.2.2.tar.gz && \
     tar -zxvf ideaIU-2020.2.2.tar.gz && \
-    mv /idea-IU-* /opt && \
+    mv idea-IU-* /opt && \
     rm ideaIU-2020.2.2.tar.gz
   else
     echo "Intellij Idea is already installed"
