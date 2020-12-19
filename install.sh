@@ -2,20 +2,19 @@
 
 source /etc/profile
 
-USER_NAME="<CHANGE-ME>"
 JAVA_VERSION="11"
 
 # create new ssh key
-[[ ! -f /home/$USER_NAME/.ssh/mykey ]] && \
-mkdir -p /home/$USER_NAME/.ssh && \
-ssh-keygen -f /home/$USER_NAME/.ssh/mykey -N '' && \
-chown -R $USER_NAME:$USER_NAME /home/$USER_NAME/.ssh
+[[ ! -f /home/$USER/.ssh/mykey ]] && \
+mkdir -p /home/$USER/.ssh && \
+ssh-keygen -f /home/$USER/.ssh/mykey -N '' && \
+chown -R $USER:$USER /home/$USER/.ssh
 
 # install packages
 apt-get update
 apt-get -y install docker.io unzip python3-pip
 # add docker privileges
-usermod -aG docker $USER_NAME
+usermod -aG docker $USER
 
 # install aws cli
 AWS_CLI_EXECUTABLE_LOCATION=$(command -v aws)
