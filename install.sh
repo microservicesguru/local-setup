@@ -12,6 +12,7 @@ chown -R $USER:$USER /home/$USER/.ssh
 
 # install packages
 apt-get update
+apt-get -y install curl
 apt-get -y install docker.io unzip python3-pip
 # add docker privileges
 usermod -aG docker $USER
