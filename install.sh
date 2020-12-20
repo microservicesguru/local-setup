@@ -9,7 +9,7 @@ apt-get update
 apt-get -y install curl
 apt-get -y install docker.io unzip python3-pip
 # add docker privileges
-usermod -aG docker $USER
+usermod -aG docker sdykyi
 
 # install aws cli
 AWS_CLI_EXECUTABLE_LOCATION=$(command -v aws)
