@@ -4,12 +4,6 @@ source /etc/profile
 
 JAVA_VERSION="11"
 
-# create new ssh key
-[[ ! -f /home/$USER/.ssh/mykey ]] && \
-mkdir -p /home/$USER/.ssh && \
-ssh-keygen -f /home/$USER/.ssh/mykey -N '' && \
-chown -R $USER:$USER /home/$USER/.ssh
-
 # install packages
 apt-get update
 apt-get -y install curl
